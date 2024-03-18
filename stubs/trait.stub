@@ -1,0 +1,20 @@
+<?php
+
+namespace App\Traits;
+
+trait {{trait_name}} 
+{
+    /**
+    * Create regular or static methods here
+    */
+
+    public function store_row($request)
+    {
+        # code...
+    }
+
+    public function update_row($request)
+    {
+        # code...
+    }
+}

@@ -1,0 +1,97 @@
+@use "../abstracts/abstracts_all" as *;
+footer {
+  background-color: $black_color;
+  padding: 50px 0 0;
+  color: #fff;
+  text-align: start;
+  img {
+    max-width: 220px;
+    margin: 0;
+  }
+  h3 {
+    text-align: start;
+    font-size: 16px;
+    margin: 15px 0 30px 0;
+    padding-inline-start: 20px;
+    border-left: 3px solid $main_color;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+  .quick_links {
+    li {
+      display: block;
+
+      @include mediaquery(max, mobile) {
+        padding: 0 10px;
+      }
+      a {
+        color: #fff;
+        position: relative;
+        padding-inline-start: 20px;
+        margin-bottom: 15px;
+        font-size: 14px;
+        line-height: 35px;
+        text-transform: capitalize;
+
+        @include mediaquery(max, l_desktop) {
+          padding-inline-start: 12px;
+          font-size: 12px;
+        }
+        @include mediaquery(max, desktop) {
+          padding-inline-start: 15px;
+          font-size: 14px;
+        }
+        @include mediaquery(max, mobile) {
+          padding-inline-start: 12px;
+          font-size: 12px;
+        }
+        &:hover {
+          color: $main_color;
+        }
+        &::before {
+          content: "\f105";
+          font-family: "Font Awesome 5 Free";
+          left: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          font-weight: 900;
+          position: absolute;
+          height: 30px;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+  .copyright {
+    padding: 20px 0;
+    border-top: 1px solid #fff1;
+    margin-top: 35px;
+    p {
+      color: #fff;
+      margin: 0;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+  }
+  @include mediaquery(max, mobile) {
+    img {
+      max-width: 90px;
+      margin-bottom: 15px;
+    }
+  }
+}
+.up_btn {
+  position: fixed;
+  bottom: 50px;
+  right: 15px;
+  opacity: 0;
+  z-index: 999;
+  @include transition(0.3s linear all);
+  &.show {
+    opacity: 1;
+    bottom: 10px;
+  }
+}
